@@ -4,8 +4,11 @@ public class EndsWith {
 
     public static boolean endsWith(char[] word, char[] post) {
         boolean result = true;
-        if (word[word.length - 1] != post[post.length - 1] || word[word.length - 2] != post[post.length - 2]) {
-            result = false;
+        for (int index = 1; index <= post.length; index++) {
+            if (word[word.length - index] != post[post.length - index]) {
+                result = false;
+                break;
+            }
         }
         return result;
     }
