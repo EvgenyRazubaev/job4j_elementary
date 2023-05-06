@@ -1,6 +1,7 @@
 package ru.job4j.oop;
 
 public class Calculator {
+
     private static int x = 5;
 
     public int divide(int a) {
@@ -20,8 +21,7 @@ public class Calculator {
     }
 
     public int sumAllOperation(int a) {
-        Calculator calculator = new Calculator();
-        return sum(a) + minus(a) + calculator.multiply(a) + divide(a);
+        return sum(a) + minus(a) + multiply(a) + divide(a);
     }
 
     public static void main(String[] args) {
