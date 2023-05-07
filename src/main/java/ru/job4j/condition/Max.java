@@ -2,12 +2,20 @@ package ru.job4j.condition;
 
 public class Max {
 
-    public static int max(int left, int right) {
-        return left >= right ? left : right;
+    public static int max(int first, int second) {
+        return first >= second ? first : second;
+    }
+
+    public static int max(int first, int second, int third) {
+        return max(third, max(first, second));
+    }
+
+    public static int max(int first, int second, int third, int fourth) {
+        return max(fourth, max(first, second, third));
     }
 
     public static void main(String[] args) {
-        int rsl = Max.max(15, 17);
+        int rsl = max(15, 17, 20);
         System.out.println("Число :" + rsl + " оказалось больше.");
     }
 }
